@@ -16,13 +16,13 @@ app.get("/", (req, res) => {
 pool.query(`
   CREATE TABLE IF NOT EXISTS contact (
     id SERIAL PRIMARY KEY,
-    phoneNumber VARCHAR(20),
+    phonenumber VARCHAR(20),
     email VARCHAR(255),
-    linkedId INTEGER,
-    linkPrecedence VARCHAR(20),
-    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    deletedAt TIMESTAMP
+    linkedid INTEGER,
+    linkprecedence VARCHAR(20),
+    createdat TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    updatedat TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    deletedat TIMESTAMP
   );
 `)
 .then(() => console.log("Contact table ready"))
