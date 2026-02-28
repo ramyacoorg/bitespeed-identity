@@ -13,7 +13,6 @@ app.get("/", (req, res) => {
 
 const PORT = process.env.PORT || 3000;
 
-// Start server only AFTER DB is ready
 async function startServer() {
   try {
     await pool.query(`
@@ -34,7 +33,7 @@ async function startServer() {
     app.use("/identify", identifyRoute);
 
     app.listen(PORT, () => {
-      console.log(\`Server running on port \${PORT}\`);
+      console.log("Server running on port " + PORT);
     });
 
   } catch (err) {
